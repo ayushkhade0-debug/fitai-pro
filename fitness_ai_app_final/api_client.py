@@ -5,7 +5,8 @@ Handles all HTTP requests to the FastAPI backend
 import requests
 import streamlit as st
 
-BASE_URL = "http://127.0.0.1:8000"
+BASE_URL = "https://fitai-backend-69an.onrender.com"
+```
 
 def get_headers():
     token = st.session_state.get("token", "")
@@ -110,7 +111,7 @@ def delete_workout(workout_id):
 # ── Backend health check ───────────────────────────────────────────────────────
 def check_backend():
     try:
-        r = requests.get(f"{BASE_URL}/health", timeout=2)
+        r = requests.get(f"{BASE_URL}/health", timeout=30)
         return r.status_code == 200
     except Exception:
         return False
