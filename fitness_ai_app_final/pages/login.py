@@ -4,7 +4,6 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from api_client import register, login, check_backend
 ```
 
-
 def show():
     st.markdown("""
     <div style="margin-bottom:2rem; text-align:center;">
